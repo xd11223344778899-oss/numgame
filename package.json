@@ -1,0 +1,21 @@
+{
+  "name": "numgame",
+  "version": "1.0.0",
+  "description": "بوت Discord للعبة تخمين الرقم",
+  "type": "module",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "keywords": ["discord", "bot", "game"],
+  "license": "ISC",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "^1.0.2",
+    "arabic-persian-reshaper": "^1.0.1",
+    "discord.js": "^14.26.4",
+    "dotenv": "^17.4.2"
+  }
+}
