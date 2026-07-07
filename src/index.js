@@ -200,4 +200,15 @@ client.on(Events.MessageCreate, async (message) => {
   }
 });
 
-client.login(config.token);
+process.on('unhandledRejection', (error) => {
+  console.error('Unhandled rejection:', error);
+});
+
+process.on('uncaughtException', (error) => {
+  console.error('Uncaught exception:', error);
+});
+
+client.login(config.token).catch((error) => {
+  console.error('فشل تسجيل الدخول إلى Discord:', error);
+  process.exit(1);
+});
